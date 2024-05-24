@@ -1,4 +1,5 @@
 
+import Profile from './Image'
 import MyButton from './MyButton'
 
 const HomePage = () => {
@@ -10,7 +11,7 @@ const HomePage = () => {
     <div>HomePage</div>
     <MyButton/>
     <MyButton/>
-    
+    <Profile />
     </>
   )
 }
