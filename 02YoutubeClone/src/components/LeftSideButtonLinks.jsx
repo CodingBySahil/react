@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const LeftSideButtonLinks = () => {
   return (
     <div
@@ -8,6 +7,7 @@ const LeftSideButtonLinks = () => {
       id="left-side-buttons-links"
       style={{ top: "10%", backgroundColor: "white" }}
     >
+      {/* <!-- left side buttons and links div ended --> */}
       <div
         className="d-flex justify-content-start align-items-center p-2"
         id="icon-text"
@@ -575,6 +575,13 @@ const LeftSideButtonLinks = () => {
         </div>
         <div>Send Feedback</div>
       </div>
+
+      {/* 
+      <!-- left side buttons and links div ended -->
+      <!-- right side vedios and content div started -->
+       */}
+
+      
     </div>
   );
 };
