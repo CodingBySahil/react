@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Navbar";
+import ButtonLinksVedioSection from "./ButtonLinksVedioSection";
 
 function ContainerFluid() {
   return (
-    <div className={'container-fluid'}>
-        <h5>I am fluid</h5>
+    <div className={"container-fluid"}>
+      <Navbar />
+      <ButtonLinksVedioSection/>
     </div>
-  )
+  );
 }
 
-export default ContainerFluid
+export default ContainerFluid;
