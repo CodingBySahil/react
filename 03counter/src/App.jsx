@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const App = () => {
   const [counter, setCounter] = useState(4);
 
