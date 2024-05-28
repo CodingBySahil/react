@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-#searchbar-wrapper {
+#searchbar_wrapper {
   width: 98% !important;
   position: fixed;
   top: 0;
@@ -57,11 +57,12 @@
   background-color: #0f0f0f;
   color: white;
 }
-#left-side-buttons-links {
+#left_side_buttons_links {
   height: 89vh;
+  background-color: red;
   overflow: hidden;
 }
-#left-side-buttons-links:hover {
+#left_side_buttons_links:hover {
   height: 89vh;
   overflow: auto;
 }

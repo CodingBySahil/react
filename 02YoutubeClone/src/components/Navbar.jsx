@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="position-fixed w-100 top-0 mb-1" style={{ backgroundColor: "white", zIndex: 1 }} id="searchbar-wrapper">
+    <div className="position-fixed w-100 top-0 mb-1" style={{ backgroundColor: "white", zIndex: 1 }} id="searchbar_wrapper">
     {/* search bar wrapper*/}
     <div className="row">
         <div className="col-2">

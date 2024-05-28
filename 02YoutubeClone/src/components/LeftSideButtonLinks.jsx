@@ -4,7 +4,7 @@ const LeftSideButtonLinks = () => {
   return (
     <div
       className="col-2 position-fixed"
-      id="left-side-buttons-links"
+      id="left_side_buttons_links"
       style={{ top: "10%", backgroundColor: "white" }}
     >
       {/* <!-- left side buttons and links div ended --> */}
@@ -575,11 +575,6 @@ const LeftSideButtonLinks = () => {
         </div>
         <div>Send Feedback</div>
       </div>
-
-      {/* 
-      <!-- left side buttons and links div ended -->
-      <!-- right side vedios and content div started -->
-       */}
 
       
     </div>
