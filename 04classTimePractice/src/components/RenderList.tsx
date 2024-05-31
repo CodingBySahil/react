@@ -9,7 +9,7 @@ const RenderList = () => {
       <ul>
         {products.map((element, index) => {
           return (
-            <li>{`On index ${index} we have value title as "${element.title}" with ID "${element.id}"`}</li>
+            <li key={index}>{`On index ${index} we have value title as "${element.title}" with ID "${element.id}"`}</li>
           );
         })}
       </ul>
