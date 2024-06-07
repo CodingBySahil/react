@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 
-
 const TodoApp = () => {
   const [newTodo, setNewTodo] = useState("");
   const [todo, setTodo] = useState(["hello", "world"]);
+  const show = () => {
+    setTodo((prevValue) => {
+      return [...prevValue, newTodo];
+    });
+    setNewTodo("");
+  };
 
   return (
     <div className="container mt-5">
@@ -16,19 +21,16 @@ const TodoApp = () => {
               className="form-control"
               placeholder="Enter new todo"
               value={newTodo}
+              onKeyDown={(e) => {
+                if (e.key == "Enter") {
+                  show();
+                }
+              }}
               onChange={(e) => {
                 setNewTodo(e.target.value);
               }}
             />
-            <button
-              className="btn btn-primary"
-              onClick={() => {
-                setTodo((prevValue) => {
-                  return [...prevValue, newTodo];
-                });
-                setNewTodo(""); // Clear input field after adding todo
-              }}
-            >
+            <button className="btn btn-primary" onClick={show}>
               Add
             </button>
           </div>
