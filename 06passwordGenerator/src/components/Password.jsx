@@ -7,7 +7,7 @@ const Password = () => {
   const [password, setPassword] = useState("I am password");
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [specialCharAllowed, setSpecialCharAllowed] = useState(false);
-  const refToPassword = useRef(null)
+  const refToPassword = useRef(null);
 
   const passwordGenerator = useCallback(() => {
     let str = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
@@ -15,6 +15,7 @@ const Password = () => {
     if (specialCharAllowed) {
       str += "!#$%^&*()_+{},.?";
     }
+    genPassword = "";
     for (let i = 0; i < length; i++) {
       genPassword += str.charAt(Math.floor(Math.random() * str.length));
     }
@@ -25,25 +26,33 @@ const Password = () => {
     passwordGenerator();
   }, [length, numberAllowed, specialCharAllowed, passwordGenerator]);
 
-  const copyPassword = ()=>{
+  const copyPassword = () => {
     window.navigator.clipboard.writeText(password);
-    refToPassword.current?.select()
-  }
+    refToPassword.current?.select();
+  };
 
   return (
     <div className="container mt-5">
-      <h3 className="text-center mb-4">Password Generator</h3>
-      <div className="card p-4 shadow">
+      <h3 className="text-center mb-4 text-dark">Password Generator</h3>
+      <div className="card p-4 shadow" style={{ backgroundColor: "#343a40", color: "#f8f9fa" }}>
         <div className="mb-3">
-          <input
-            type="text"
-            readOnly
-            value={password}
-            className="form-control text-center"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
-            ref={refToPassword}
-          />
-          <button onClick={copyPassword}>Copy</button>
+          <div className="input-group">
+            <input
+              type="text"
+              readOnly
+              value={password}
+              className="form-control text-center"
+              style={{backgroundColor:'#dee1e4', fontWeight: "bold", fontSize: "1.2rem", color: "#343a40" }}
+              ref={refToPassword}
+            />
+            <button
+              onClick={copyPassword}
+              className="btn btn-outline-light"
+              type="button"
+            >
+              Copy
+            </button>
+          </div>
         </div>
         <div className="mb-3">
           <label htmlFor="range" className="form-label">
