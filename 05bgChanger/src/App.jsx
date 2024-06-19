@@ -1,12 +1,28 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-  const [bgColor, setBgColor] = useState("blue");
+  const [bgColor, setBgColor] = useState("white");
+
+  const colors = [
+    { name: "Red", colorCode: "red" },
+    { name: "Olive", colorCode: "olive" },
+    { name: "Yellow", colorCode: "yellow" },
+    { name: "Black", colorCode: "black" },
+    { name: "Green", colorCode: "green" },
+    { name: "White", colorCode: "white" },
+    { name: "Blue", colorCode: "blue" },
+    { name: "Purple", colorCode: "purple" },
+    { name: "Orange", colorCode: "orange" },
+    { name: "Pink", colorCode: "pink" },
+    { name: "Brown", colorCode: "brown" },
+    { name: "Grey", colorCode: "grey" },
+  ];
 
   return (
     <div
       style={{
-        width: "100wh",
+        width: "100vw",
         backgroundColor: bgColor,
         height: "100vh",
         display: "flex",
@@ -14,69 +30,39 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          // left: "50",
-          // right: "50%",
-          // bottom: "50",
-          // top: "50%",
-        }}
-      >
-        <button
-          onClick={() => setBgColor("red")}
-          className="btn btn-lg m-2"
-          style={{ color: "white",
-            backgroundColor:"red",
-           }}
-        >
-          Red
-        </button>
-        <button
-          onClick={() => setBgColor("olive")}
-          className="btn btn-lg m-2"
-          style={{ color: "white",
-            backgroundColor:"olive",
-           }}
-        >
-          olive
-        </button>
-        <button
-          onClick={() => setBgColor("yellow")}
-          className="btn btn-lg m-2"
-          style={{ color: "white",
-            backgroundColor:"yellow",
-           }}
-        >
-          yellow
-        </button>
-        <button
-          onClick={() => setBgColor("black")}
-          className="btn btn-lg m-2"
-          style={{ color: "white",
-            backgroundColor:"black",
-           }}
-        >
-          black
-        </button>
-        <button
-          onClick={() => setBgColor("green")}
-          className="btn btn-lg m-2"
-          style={{ color: "white",
-            backgroundColor:"green",
-           }}
-        >
-          green
-        </button>
-        <button
-          onClick={() => setBgColor("white")}
-          className="btn btn-lg m-2"
-          style={{ color: "black",
-            backgroundColor:"white",
-           }}
-        >
-          white
-        </button>
+      <div className="container-fluid ">
+        <div className="row">
+          <div className="text-center fixed-top mt-5">
+            Click any button to change the background color respectively
+          </div>
+        </div>
+        <div className="row mb-5 fixed-bottom">
+          {colors.map((color, index) => (
+            <div key={index} className="col-12 col-sm-3 col-md-2 col-lg-1 mb-2">
+              <button
+                onClick={() => setBgColor(color.colorCode)}
+                className="btn btn-sm w-100"
+                style={{
+                  color:
+                    color.colorCode === "yellow" || color.colorCode === "white"
+                      ? "black"
+                      : "white",
+                  backgroundColor: color.colorCode,
+                  border: "1px solid black",
+                  transition: "transform 0.2s",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.1)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              >
+                {color.name}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
