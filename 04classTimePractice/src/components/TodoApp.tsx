@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const TodoApp = () => {
   const [newTodo, setNewTodo] = useState("");
-  const [todo, setTodo] = useState(["hello", "world", 'asif']);
+  const [todo, setTodo] = useState(["hello", "world", "asif"]);
 
   // show function
   const show = () => {
