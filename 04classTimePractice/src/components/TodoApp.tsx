@@ -2,12 +2,25 @@ import { useState } from "react";
 
 const TodoApp = () => {
   const [newTodo, setNewTodo] = useState("");
-  const [todo, setTodo] = useState(["hello", "world"]);
+  const [todo, setTodo] = useState(["hello", "world", 'asif']);
+
+  // show function
   const show = () => {
     setTodo((prevValue) => {
       return [...prevValue, newTodo];
     });
     setNewTodo("");
+  };
+
+  // delete function
+  const del = (i: number) => {
+    setTodo((prevValue) => {
+      return prevValue.filter((val, index) => {
+        if (index !== i) {
+          return val;
+        }
+      });
+    });
   };
 
   return (
@@ -38,6 +51,12 @@ const TodoApp = () => {
             {todo.map((element, index) => (
               <li key={index} className="list-group-item">
                 {element}
+                <button
+                  className="ms-5 btn btn-danger btn-sm"
+                  onClick={() => del(index)}
+                >
+                  Delete
+                </button>
               </li>
             ))}
           </ul>
