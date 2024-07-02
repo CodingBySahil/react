@@ -12,6 +12,7 @@ const Weather = () => {
       .then((response) => {
         console.log(response.data)
         setWeatherData(response.data)
+        setCityName('')
       })
       .catch((error) => {
         console.log(error)
