@@ -1,16 +1,121 @@
 import React from "react";
+import NewPost from "./NewPost"; // Assuming NewPost component is imported and defined properly
+
 import logo1 from "../assets/images/channel.jpg";
-import tomJerryImage from "../assets/images/tom&jerry.webp";
 import logo2 from "../assets/images/hollywoodChannel.jpg";
+import logo3 from "../assets/images/channelThree.jpg"
+import logo4 from "../assets/images/logo4.jpg"
+import logo5 from "../assets/images/logo5.jpg"
+import logo6 from "../assets/images/logo6.jpg"
+import tomJerryImage from "../assets/images/tom&jerry.webp";
 import whiteSnake from "../assets/images/whiteSnakeCartoon.webp";
 import shortcutKeyboard from "../assets/images/keyboard.webp";
-import youngBoy from '../assets/images/youngBoy.webp'
-import awesomeCartoon from '../assets/images/cartoon2.webp'
-import kinkKong from '../assets/images/kingKong.webp'
-import opratingSystem from '../assets/images/opratingSystem.webp'
-import panda from '../assets/images/pandaCartoon.webp'
-import robotics from '../assets/images/robotics.webp'
-import naat from '../assets/images/ye-donya-chode-hamne.webp'
+import awesomeCartoon from "../assets/images/cartoon2.webp";
+import youngBoy from "../assets/images/youngBoy.webp";
+import kinkKong from "../assets/images/kingKong.webp";
+import opratingSystem from "../assets/images/opratingSystem.webp";
+import panda from "../assets/images/pandaCartoon.webp";
+import robotics from "../assets/images/robotics.webp";
+import naat from "../assets/images/ye-donya-chode-hamne.webp";
+import barmudaTriangle from "../assets/images/barmudaTriangle.webp"
+import dontBeThisCoder from "../assets/images/donotBeThisCoder.webp"
+import moodbooster from "../assets/images/moodBooster.webp"
+import reactJs from "../assets/images/reactJs.webp"
+
+
+const postsData = [
+  {
+    postImg: tomJerryImage,
+    channelLogoIMG: logo1,
+    postDescription: "New hilarious cartoon adventures of Tom and Jerry, classic fun guaranteed.",
+    channelName: "Tom and Jerry Fan Channel"
+  },
+  {
+    postImg: whiteSnake,
+    channelLogoIMG: logo1,
+    postDescription: "Exciting new cartoon with amazing visuals, a must-watch for cartoon enthusiasts.",
+    channelName: "Cartoon Lovers"
+  },
+  {
+    postImg: shortcutKeyboard,
+    channelLogoIMG: logo1,
+    postDescription: "Learn essential keyboard shortcuts to boost PC efficiency and productivity.",
+    channelName: "Tech Tips"
+  },
+  {
+    postImg: awesomeCartoon,
+    channelLogoIMG: logo1,
+    postDescription: "Discover a new cartoon release that promises entertainment and joy for all.",
+    channelName: "Cartoon Central"
+  },
+  {
+    postImg: youngBoy,
+    channelLogoIMG: logo2,
+    postDescription: "Follow a young boy's thrilling adventures in the bustling city environment.",
+    channelName: "Adventure Seekers"
+  },
+  {
+    postImg: kinkKong,
+    channelLogoIMG: logo2,
+    postDescription: "King Kong returns in a thrilling new adventure, action-packed and epic.",
+    channelName: "Hollywood Movies"
+  },
+  {
+    postImg: opratingSystem,
+    channelLogoIMG: logo2,
+    postDescription: "Explore the latest updates and features of modern operating systems.",
+    channelName: "Tech Innovations"
+  },
+  {
+    postImg: panda,
+    channelLogoIMG: logo2,
+    postDescription: "Adorable panda cartoon series for kids, full of fun and educational content.",
+    channelName: "Animal World"
+  },
+  {
+    postImg: robotics,
+    channelLogoIMG: logo2,
+    postDescription: "Exciting exploration into the future of robotics and AI technology advancements.",
+    channelName: "Tech Explorations"
+  },
+  {
+    postImg: naat,
+    channelLogoIMG: logo2,
+    postDescription: "Deep dive into spiritual enlightenment through beautiful Naat recitations and teachings.",
+    channelName: "Spiritual Journeys"
+  },
+  {
+    postImg: barmudaTriangle,
+    channelLogoIMG: logo3,
+    postDescription: "Unravel the mysteries of the Bermuda Triangle with captivating stories and theories.",
+    channelName: "Mystery Explorers"
+  },
+  {
+    postImg: dontBeThisCoder,
+    channelLogoIMG: logo3,
+    postDescription: "Avoid common mistakes and learn best practices for coding success.",
+    channelName: "Coding Tips"
+  },
+  {
+    postImg: moodbooster,
+    channelLogoIMG: logo4,
+    postDescription: "Uplift your spirits with heartwarming stories and inspirational moments.",
+    channelName: "Positive Vibes"
+  },
+  {
+    postImg: reactJs,
+    channelLogoIMG: logo5,
+    postDescription: "Master React.js with tutorials, tips, and advanced techniques.",
+    channelName: "React.js Mastery"
+  },
+  {
+    postImg: moodbooster,
+    channelLogoIMG: logo6,
+    postDescription: "Experience daily dose of positive energy and motivation to brighten your day.",
+    channelName: "Daily Motivation"
+  }
+];
+
 
 const RightSideVediosContent = () => {
   return (
@@ -64,1170 +169,26 @@ const RightSideVediosContent = () => {
           <div className="col-12">
             <div className="row blank-row"></div>
             <div className="row">
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={tomJerryImage}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Tom and Jerry funny cartoon | beautiful scenes and many
-                        more
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={whiteSnake}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo2}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        WHITE SNAKE HOLLYWOOD NEW 2024 HINDI DUBBED WHITE
-                      </h6>
-                      <p className="channel-name">Hollywood Hindi</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={shortcutKeyboard}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Make life easy with using Shortcuts | computer knowledge
-                        | use Keyboard
-                      </h6>
-                      <p className="channel-name">Shortcuts easy</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={youngBoy}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Young Boy was chosen by an Ancient Stone which have
-                        ability to Create a God || Martial
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- another post --> */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={awesomeCartoon}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Watch this awesome cartoon with us | very cool story |
-                        most viral 2024
-                      </h6>
-                      <p className="channel-name">Funny Cartoon</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- another post --> */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs Godzilla 2024 | Hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={opratingSystem}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Operating system Very clear concepts | 300+ views |
-                        study with me
-                      </h6>
-                      <p className="channel-name">Study here</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={panda}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Panda in new outfits | Hindi dubbed full cartoon | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Cartoon Cycle</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={robotics}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Robotics of the year | new technology of the world |
-                        make it easy
-                      </h6>
-                      <p className="channel-name">Tech watch</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={naat}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Ye donya chode de ham ne | urdu naat | 2024 naat | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Islamic Steps</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs Godzilla 2024 | Hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={tomJerryImage}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Tom and Jerry funny cartoon | beautiful scenes and many
-                        more
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={youngBoy}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Young Boy was chosen by an Ancient Stone which have
-                        ability to Create a God || Martial
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={awesomeCartoon}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Watch this awesome cartoon with us | very cool story |
-                        most viral 2024
-                      </h6>
-                      <p className="channel-name">Funny Cartoon</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs Godzilla 2024 | Hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={opratingSystem}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Operating system Very clear concepts | 300+ views |
-                        study with me
-                      </h6>
-                      <p className="channel-name">Study here</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={panda}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Panda in new outfits | Hindi dubbed full cartoon | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Cartoon Cycle</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={robotics}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Robotics of the year | new technology of the world |
-                        make it easy
-                      </h6>
-                      <p className="channel-name">Tech watch</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={naat}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Ye donya chode de ham ne | urdu naat | 2024 naat | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Islamic Steps</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs Godzilla 2024 | Hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={tomJerryImage}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Tom and Jerry funny cartoon | beautiful scenes and many
-                        more
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={youngBoy}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Young Boy was chosen by an Ancient Stone which have
-                        ability to Create a God || Martial
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={awesomeCartoon}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Watch this awesome cartoon with us | very cool story |
-                        most viral 2024
-                      </h6>
-                      <p className="channel-name">Funny Cartoon</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs Godzilla 2024 | Hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={opratingSystem}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Oprating system Very clear concepts | 300+ views | stydy
-                        with me
-                      </h6>
-                      <p className="channel-name">Study here</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={panda}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Panda in new outfits | hindi dubbed full cartoon | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Cartoon Cycle</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={robotics}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Robotics of the year | new technology of the world |
-                        make it easy
-                      </h6>
-                      <p className="channel-name">Tech watch</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={naat}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Ye donya chode de ham ne | urdu naat | 2024 naat | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Islamic Steps</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs godzila 2024 | hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={tomJerryImage}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Tom and Jerry funny cartoon | beautiful scenes and many
-                        more
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={youngBoy}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Young Boy was chosen by an Ancient Stone which have
-                        ability to Create a God || Martial
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={awesomeCartoon}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Wathc this awesome cartoon with us | very cool story |
-                        most viral 2024
-                      </h6>
-                      <p className="channel-name">Funny Cartoon</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs godzila 2024 | hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={opratingSystem}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Oprating system Very clear concepts | 300+ views | stydy
-                        with me
-                      </h6>
-                      <p className="channel-name">Study here</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={panda}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Panda in new outfits | hindi dubbed full cartoon | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Cartoon Cycle</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={robotics}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Robotics of the year | new technology of the world |
-                        make it easy
-                      </h6>
-                      <p className="channel-name">Tech watch</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={naat}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Ye donya chode de ham ne | urdu naat | 2024 naat | most
-                        viral
-                      </h6>
-                      <p className="channel-name">Islamic Steps</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={kinkKong}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        King kong vs godzila 2024 | hindi dubbed full movie |
-                        viral 2024
-                      </h6>
-                      <p className="channel-name">Monster Mov</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* another post */}
-              <div className="col-12 col-md-6 col-lg-4">
-                <div className="y-post d-flex flex-column">
-                  <div className="post-img">
-                    <img
-                      className="img-fluid rounded-3"
-                      src={tomJerryImage}
-                      alt="post img"
-                    />
-                  </div>
-                  <div className="d-flex gap-2 mt-3">
-                    <span>
-                      <img
-                        src={logo1}
-                        className="img-fluid"
-                        alt="channel logo"
-                        style={{ borderRadius: "50%" }}
-                      />
-                    </span>
-                    <span>
-                      <h6 className="description d-inline-block">
-                        Tom and Jerry funny cartoon | beautiful scenes and many
-                        more
-                      </h6>
-                      <p className="channel-name">Channel Name</p>
-                    </span>
-                  </div>
-                </div>
-              </div>
+              {postsData.map((post, index) => (
+                
+                  <NewPost
+                    key={index}
+                    postImg={post.postImg}
+                    channelLogoIMG={post.channelLogoIMG}
+                    postDescription={post.postDescription}
+                    channelName={post.channelName}
+                  />
+              ))}
+              {postsData.map((post, index) => (
+                
+                  <NewPost
+                    key={index}
+                    postImg={post.postImg}
+                    channelLogoIMG={post.channelLogoIMG}
+                    postDescription={post.postDescription}
+                    channelName={post.channelName}
+                  />
+              ))}
             </div>
           </div>
         </section>
