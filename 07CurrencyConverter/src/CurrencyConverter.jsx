@@ -60,8 +60,7 @@ const CurrencyConverter = () => {
         </div>
         <div className="result">
           <h2>
-            {amount} {fromCurrency} is equal to{" "}
-            {(amount * exchangeRate).toFixed(2)} {toCurrency}
+            {`${amount} ${fromCurrency} : ${(amount * exchangeRate).toFixed(2)} ${toCurrency}`}
           </h2>
         </div>
       </div>
