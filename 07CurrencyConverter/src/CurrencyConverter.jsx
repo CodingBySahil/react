@@ -5,7 +5,7 @@ const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("PKR");
-  const [exchangeRate, setExchangeRate] = useState(0);
+  const [exchangeRate, setExchangeRate] = useState(1);
 
   useEffect(() => {
     // Fetch exchange rate (mocked for demonstration)

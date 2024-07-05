@@ -13,7 +13,7 @@
   }
   
   .content {
-    max-width: 600px; /* Limit content width for larger screens */
+    max-width: 85vw; /* Limit content width for larger screens */
     padding: 20px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
