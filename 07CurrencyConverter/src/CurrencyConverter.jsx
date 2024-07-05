@@ -1,42 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import './CurrencyConverter.css';
+import React, { useState, useEffect } from "react";
+import "./CurrencyConverter.css";
 
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1);
-  const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('EUR');
+  const [fromCurrency, setFromCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("PKR");
   const [exchangeRate, setExchangeRate] = useState(0);
-  const [backgroundImage, setBackgroundImage] = useState('');
 
   useEffect(() => {
     // Fetch exchange rate (mocked for demonstration)
     const fetchExchangeRate = async () => {
       // Replace with actual API call to get exchange rate
-      const mockExchangeRate = 0.85; // Example: 1 USD = 0.85 EUR
+      const mockExchangeRate = 278; // Example: 1 USD = 278 PKR
       setExchangeRate(mockExchangeRate);
     };
 
     fetchExchangeRate();
-
-    // Fetch random currency-related image from Unsplash
-    const fetchBackgroundImage = async () => {
-      try {
-        const response = await fetch(
-          'https://api.unsplash.com/photos/random?query=currency&orientation=landscape&client_id=YOUR_UNSPLASH_ACCESS_KEY'
-        );
-        if (response.ok) {
-          const data = await response.json();
-          setBackgroundImage(data.urls.regular);
-        } else {
-          setBackgroundImage('');
-        }
-      } catch (error) {
-        console.error('Error fetching background image:', error);
-        setBackgroundImage('');
-      }
-    };
-
-    fetchBackgroundImage();
   }, []);
 
   const handleAmountChange = (e) => {
@@ -52,7 +31,7 @@ const CurrencyConverter = () => {
   };
 
   return (
-    <div className="currency-converter container-fluid" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="currency-converter container-fluid">
       <div className="content">
         <h1>Currency Converter</h1>
         <div className="input-group">
@@ -69,9 +48,6 @@ const CurrencyConverter = () => {
             className="form-control"
           >
             <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-            <option value="JPY">JPY</option>
           </select>
           <span className="input-group-text">to</span>
           <select
@@ -79,15 +55,13 @@ const CurrencyConverter = () => {
             onChange={handleToCurrencyChange}
             className="form-control"
           >
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-            <option value="GBP">GBP</option>
-            <option value="JPY">JPY</option>
+            <option value="PKR">PKR</option>
           </select>
         </div>
         <div className="result">
           <h2>
-            {amount} {fromCurrency} is equal to {(amount * exchangeRate).toFixed(2)} {toCurrency}
+            {amount} {fromCurrency} is equal to{" "}
+            {(amount * exchangeRate).toFixed(2)} {toCurrency}
           </h2>
         </div>
       </div>
