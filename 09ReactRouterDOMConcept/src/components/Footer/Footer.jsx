@@ -84,7 +84,10 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <Link to="https://www.facebook.com/profile.php?id=100088100841721&mibextid=JRoKGi" className="text-gray-500 hover:text-gray-900">
+            <Link
+              to="https://www.facebook.com/profile.php?id=100088100841721&mibextid=JRoKGi"
+              className="text-gray-500 hover:text-gray-900"
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -100,7 +103,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Facebook page</span>
             </Link>
-            <Link to="https://www.linkedin.com/in/codingBySAHIL/" className="text-gray-500">
+            <Link
+              to="https://www.linkedin.com/in/codingBySAHIL/"
+              className="text-gray-500"
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -128,7 +134,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Twitter page</span>
             </Link>
-            <Link to="https://github.com/CodingBySahil" className="text-gray-500">
+            <Link
+              to="https://github.com/CodingBySahil"
+              className="text-gray-500"
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -144,7 +153,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">GitHub account</span>
             </Link>
-            <Link to="Wa.me/+923192141818/?text=𝐇𝐞llo᭄CodingBySahil𝄟≛⃝*😘" className="text-gray-500">
+            <Link
+              to="Wa.me/+923192141818/?text=𝐇𝐞llo᭄CodingBySahil𝄟≛⃝*😘"
+              className="text-gray-500"
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
