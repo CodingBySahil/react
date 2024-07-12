@@ -4,20 +4,14 @@ import UserContext from "../Context/UserContext";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { setUser } = useContext(UserContext);
+  const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (username && password) {
-      setUser({ username, password });
-    } else {
-      setUser(null);
-    }
-  };
+  const { setUser } = useContext(UserContext);
 
   return (
     <div className="flex flex-col space-y-4">
-      <h2 className="text-2xl font-semibold text-center">Login</h2>
+      <h2 className="text-2xl font-semibold text-center mb-4">Login</h2>
+      {error && <p className="text-red-500 text-sm text-center">{error}</p>}
       <input
         type="text"
         placeholder="Username"
@@ -34,9 +28,31 @@ const Login = () => {
       />
       <button
         className="px-4 py-2 text-white bg-orange-400 rounded hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400"
-        onClick={handleLogin}
+        onClick={(e) => {
+          e.preventDefault();
+          if (username && password) {
+            setUser({ username, password });
+            setError("");
+          } else if (username) {
+            setError("Please enter your password.");
+          } else if (password) {
+            setError("Please enter your username.");
+          } else {
+            setError("Please enter both username and password.");
+          }
+        }}
       >
         Submit
+      </button>
+      {/* Optional: Clear fields button */}
+      <button
+        className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
+        onClick={() => {
+          setUsername("");
+          setPassword("");
+        }}
+      >
+        Clear Fields
       </button>
     </div>
   );
