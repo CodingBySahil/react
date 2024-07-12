@@ -14,14 +14,14 @@ const Login = () => {
       {error && <p className="text-red-500 text-sm text-center">{error}</p>}
       <input
         type="text"
-        placeholder="Username"
+        placeholder="Enter any User Name"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"
       />
       <input
         type="password"
-        placeholder="Password"
+        placeholder="Enter new password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"
@@ -46,7 +46,7 @@ const Login = () => {
       </button>
       {/* Optional: Clear fields button */}
       <button
-        className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 focus:outline-none"
+        className="px-4 py-2 text-white bg-orange-400 rounded hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400"
         onClick={() => {
           setUsername("");
           setPassword("");

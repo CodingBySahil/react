@@ -10,7 +10,7 @@ const App = () => {
         {/* Navbar */}
         <nav className="bg-orange-400 p-4">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <span className="text-white text-2xl font-semibold">My App</span>
+            <span className="text-white text-2xl font-semibold">codingBySahil</span>
             {/* You can add more links to navigate to different sections */}
           </div>
         </nav>
@@ -30,7 +30,7 @@ const App = () => {
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white text-center py-4">
-          <p>&copy; 2024 My App. All rights reserved.</p>
+          <p>&copy; 2024 My App. All rights reserved by codingBySahil.</p>
         </footer>
       </div>
     </UserContextProvider>
