@@ -29,7 +29,7 @@ const App = () => {
         </div>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-white text-center py-4">
+        <footer className="bg-orange-400 text-white text-center py-4">
           <p>&copy; 2024 My App. All rights reserved by codingBySahil.</p>
         </footer>
       </div>
