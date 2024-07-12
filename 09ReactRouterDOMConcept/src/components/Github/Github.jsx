@@ -14,6 +14,7 @@ const Github = () => {
       }
       const data = await response.json();
       setData(data);
+      console.log(data);
       setError(null); // Reset error state on successful fetch
     } catch (error) {
       setError(error);
