@@ -1,12 +1,13 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const User = () => {
-    let {userId} = useParams()
+  let { userId } = useParams();
   return (
-    <div className='bg-slate-700 p-6 w-full text-white  text-center'>User : {userId = 123}</div>
-  )
-}
+    <div className="bg-slate-700 p-6 w-full text-white  text-center">
+      User : {userId}
+    </div>
+  );
+};
 
-export default User
+export default User;
