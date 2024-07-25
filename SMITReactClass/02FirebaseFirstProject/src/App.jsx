@@ -1,8 +1,7 @@
-import { collection, addDoc } from "firebase/firestore";
-import { useState } from "react";
+import { collection, addDoc, getDocs, getFirestore } from "firebase/firestore";
+import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -30,7 +29,6 @@ export default function App() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // console.log(name,value);
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -39,15 +37,31 @@ export default function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-
     try {
-      const docRef = await addDoc(collection(db, "users"), formData);
+      const docRef = await addDoc(collection(db, "data"), formData);
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);
     }
   };
+
+  const [postData, setPostData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "data"));
+        const docs = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setPostData(docs);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+    getData();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
@@ -122,6 +136,17 @@ export default function App() {
           Submit
         </button>
       </form>
+
+      <ul className="mt-8 w-full max-w-md bg-white rounded-lg shadow-md p-4">
+        {postData.map((eachItem) => (
+          <li key={eachItem.id} className="mb-4 p-4 border-b last:border-b-0">
+            <h2 className="text-lg font-bold mb-1">Name: {eachItem.name}</h2>
+            <p>Age: {eachItem.age}</p>
+            <p>Email: {eachItem.email}</p>
+            <p>Address: {eachItem.address}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
