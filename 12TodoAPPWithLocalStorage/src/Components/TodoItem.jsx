@@ -17,7 +17,7 @@ function TodoItem({ todo }) {
 
   return (
     <div
-      className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300 text-black ${
+      className={`flex gap-x-3 rounded-lg border border-black/10 px-3 py-1.5 text-black shadow-sm shadow-white/50 duration-300 ${
         todo.done ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
       }`}
     >
@@ -29,7 +29,7 @@ function TodoItem({ todo }) {
       />
       <input
         type="text"
-        className={`border outline-none w-full bg-transparent rounded-lg ${
+        className={`w-full rounded-lg border bg-transparent outline-none ${
           isEditing ? "border-black/10 px-2" : "border-transparent"
         } ${todo.done ? "line-through" : ""}`}
         value={text}
@@ -37,7 +37,7 @@ function TodoItem({ todo }) {
         readOnly={!isEditing}
       />
       <button
-        className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
+        className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-gray-50 text-sm hover:bg-gray-100 disabled:opacity-50"
         onClick={() => {
           if (todo.done) return;
 
@@ -50,7 +50,7 @@ function TodoItem({ todo }) {
         {isEditing ? "📁" : "✏️"}
       </button>
       <button
-        className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
+        className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-gray-50 text-sm hover:bg-gray-100"
         onClick={() => removeItem(todo.id)}
       >
         ❌
